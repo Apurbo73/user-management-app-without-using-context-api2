@@ -5,8 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 import NewUser from "./component/NewUser";
 function App() {
   const [users, setUsers] = useState([
-    { id: 1, name: "Apurbo" },
-    { id: 2, name: "Deb Nath" }
+    { id: 1, userName: "Apurbo" },
+    { id: 2, userName: "Deb Nath" }
   ]);
   const handleDeleteUser = id => {
     const filteredUsers = users.filter(user => user.id !== id);
@@ -14,9 +14,9 @@ function App() {
     setUsers(filteredUsers);
   };
   const handleAddUser = newUser => {
-    const { name } = newUser;
+    console.log(newUser)
     // toast("ok");
-    setUsers(previousUsers => [...previousUsers, newUser]);
+    setUsers(previousUsers => [...previousUsers,newUser ]);
   };
   return (
     <div className="text-center mt-5">
