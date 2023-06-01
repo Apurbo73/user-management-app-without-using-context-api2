@@ -1,10 +1,16 @@
 import React from "react";
 import User from "./User";
 
-const Users = ({ users,handleDeleteUser }) => {
+const Users = ({ users, handleDeleteUser }) => {
   return (
     <div className="d-flex mx-auto container">
-      {users.map(user => <User user={user} key={user.id} handleDeleteUser={handleDeleteUser}/>)}
+      {users.map(user =>
+        <User
+          user={user}
+          key={user.id}
+          handleDeleteUser={handleDeleteUser}
+        />
+      )}
     </div>
   );
 };
